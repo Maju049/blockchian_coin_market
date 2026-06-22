@@ -89,7 +89,7 @@ const StoreContext = createContext<StoreContextType | undefined>(undefined);
 export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Load products
   const [products, setProducts] = useState<Product[]>(() => {
-    const saved = localStorage.getItem('apexmining_products_v3');
+    const saved = localStorage.getItem('apexmining_products_v4');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -189,7 +189,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Sync to LocalStorage
   useEffect(() => {
-    localStorage.setItem('apexmining_products_v3', JSON.stringify(products));
+    localStorage.setItem('apexmining_products_v4', JSON.stringify(products));
   }, [products]);
 
   useEffect(() => {
