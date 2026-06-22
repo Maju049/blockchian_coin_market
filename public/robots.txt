@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Maju049.github.io/blockchian_coin_market/sitemap.xml
